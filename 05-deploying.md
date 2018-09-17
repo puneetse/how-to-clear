@@ -54,7 +54,7 @@ Insert the following content into the `mixer.conf` file:
 server {
         server_name localhost;
         location / {
-                  root /home/clear/mix/update/www;
+                  root /home/clear/clearlinux/mix/update/www;
                   autoindex on;
         }
 }
@@ -175,6 +175,9 @@ console. For this we also need the `OVMF.fd` file. These can be found
 in the `files` folder inside the training repository.
 
 ```
+~/mix $ cp /usr/share/qemu/OVMF.fd .
+~/mix $ curl -O https://download.clearlinux.org/image/start_qemu.sh
+~/mix $ chmod +x start_qemu.sh	
 ~/mix $ sudo ./start_qemu.sh release.img
 ```
 
